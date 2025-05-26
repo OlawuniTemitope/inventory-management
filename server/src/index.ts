@@ -32,10 +32,10 @@ app.use("/users", userRoutes); // http://localhost:8000/users
 app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
 
 
- app.use(express.static(path.join(__dirname, '/client/out')));
+ app.use(express.static(path.join(__dirname, '/client/.next')));
 
     app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'out', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', '.next', 'index.html'));
     })
 
     app.use((err: { statusCode: number; message: string; },req:any,res:any,next:any)=>{
