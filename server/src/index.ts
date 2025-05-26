@@ -6,10 +6,10 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser"
 /* ROUTE IMPORTS */
-import dashboardRoutes from "./routes/dashboardRoutes.ts";
-import productRoutes from "./routes/productRout.ts";
-import userRoutes from "./routes/userRoute.ts";
-import expenseRoutes from "./routes/expenseRoute.ts";
+import dashboardRoutes from "./routes/dashboardRoutes";
+import productRoutes from "./routes/productRout";
+import userRoutes from "./routes/userRoute";
+import expenseRoutes from "./routes/expenseRoute";
 import path from 'path'
 
 /* CONFIGURATIONS */
