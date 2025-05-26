@@ -1,4 +1,4 @@
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -38,7 +38,7 @@ app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
     res.sendFile(path.join(__dirname, 'client', '.next', 'index.html'));
     })
 
-    app.use((err: { statusCode: number; message: string; },req:any,res:any,next:any)=>{
+    app.use((err: { statusCode: number; message: string; },req:Request,res:Response,next:NextFunction)=>{
         const statusCode = err.statusCode || 500;
         const message = err.message || "Internal server error";
         return res.status(statusCode).json({
