@@ -13,6 +13,7 @@ import expenseRoutes from "./routes/expenseRoute";
 import path from 'path'
 
 /* CONFIGURATIONS */
+
 dotenv.config();
 const __dirname = path.resolve();
 const app = express();
