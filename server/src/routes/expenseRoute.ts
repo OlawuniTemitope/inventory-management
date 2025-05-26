@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getExpensesByCategory } from "../controllers/expenseController.ts";
+import { getExpensesByCategory } from "../controllers/expenseController";
 
 const router = Router();
 
